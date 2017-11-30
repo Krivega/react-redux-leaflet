@@ -1,0 +1,73 @@
+{
+  "name": "react-redux-leaflet",
+  "description": "Working with leaflet map in the infrastructure of react-redux",
+  "version": "0.1.0",
+  "keywords": [
+    "reactjs",
+    "redux"
+  ],
+  "contributors": [
+    {
+      "name": "Krivega Dmitriy",
+      "email": "mr.krivega@gmail.com",
+      "web": "http://krivega.com/"
+    }
+  ],
+  "demos": [
+    "http://krivega.com/lab/react-redux-leaflet"
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/Krivega/react-redux-leaflet.git"
+    }
+  ],
+  "private": true,
+  "dependencies": {
+    "@material/animation": "^0.25.0",
+    "@material/button": "^0.25.0",
+    "@material/elevation": "^0.25.0",
+    "@material/theme": "^0.25.0",
+    "@material/typography": "^0.3.0",
+    "cross-env": "^5.1.1",
+    "husky": "^0.14.3",
+    "immutable": "^3.8.2",
+    "leaflet": "^1.2.0",
+    "lint-staged": "^5.0.0",
+    "lodash": "^4.17.4",
+    "node-sass-chokidar": "0.0.3",
+    "node-uuid": "^1.4.8",
+    "normalize.css": "^7.0.0",
+    "npm-run-all": "^4.1.2",
+    "prettier": "^1.8.2",
+    "prop-types": "^15.6.0",
+    "re-resizable": "^4.0.3",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-leaflet": "^1.7.7",
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.0.17",
+    "rebem-classname": "^0.4.0",
+    "redux": "^3.7.2",
+    "redux-immutable": "^4.0.0",
+    "redux-saga": "^0.16.0",
+    "reselect": "^3.0.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "build-css": "node-sass-chokidar src/ -o src/ --include-path=src/ --include-path=node_modules/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --include-path=src/ --include-path=node_modules/ --watch --recursive",
+    "start-js": "cross-env NODE_PATH=src react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "cross-env NODE_PATH=src react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "cross-env NODE_PATH=src react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

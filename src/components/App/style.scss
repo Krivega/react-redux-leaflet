@@ -1,0 +1,12 @@
+@import 'sass/style';
+@import '@material/typography/mixins';
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i&subset=cyrillic);
+
+.app {
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+
+  @include mdc-typography-base;
+}

@@ -1,0 +1,7 @@
+@import 'sass/style';
+
+.layers-list {
+  @extend %syslist;
+
+  margin-bottom: 20px;
+}

@@ -1,0 +1,18 @@
+@import 'sass/style';
+@import '@material/elevation/mixins';
+@import '@material/theme/mixins';
+
+.layers {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 401;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 24px;
+  border-bottom-left-radius: 4px;
+
+  @include mdc-theme-prop(background-color, background);
+
+  @include mdc-elevation(3);
+}

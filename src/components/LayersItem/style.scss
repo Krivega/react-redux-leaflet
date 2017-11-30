@@ -1,0 +1,37 @@
+@import 'sass/style';
+@import '@material/theme/mixins';
+
+.layers-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 40px;
+
+  &:hover {
+    @include mdc-theme-prop(color, primary);
+  }
+
+  &_active {
+    @include mdc-theme-prop(color, secondary);
+  }
+
+  &__icon {
+    min-width: 18px;
+    padding-right: 16px;
+    cursor: pointer;
+  }
+
+  &__content {
+    display: inline-flex;
+    align-items: center;
+    min-width: 150px;
+    cursor: pointer;
+  }
+
+  &__actions {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    margin-left: auto;
+  }
+}

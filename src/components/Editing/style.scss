@@ -1,0 +1,15 @@
+@import 'sass/style';
+
+.editing {
+  display: flex;
+  align-items: flex-end;
+
+  &__field {
+    flex-grow: 1;
+  }
+
+  &__action {
+    margin-bottom: 8px;
+    margin-left: 16px;
+  }
+}

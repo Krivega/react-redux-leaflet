@@ -1,0 +1,17 @@
+@import '@material/animation/functions';
+@import '@material/animation/variables';
+
+@function transition($property) {
+  @return #{$property} 180ms $mdc-animation-standard-curve-timing-function;
+}
+
+%sys {
+  margin: 0;
+  padding: 0;
+}
+
+%syslist {
+  list-style: none;
+
+  @extend %sys;
+}
